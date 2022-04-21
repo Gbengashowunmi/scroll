@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -17,16 +21,25 @@ main{
     justify-content: center;
     align-items: center;
 }
-header{
+.header{
     width: 100%;
     height: fit-content;
-    background-color: aliceblue;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: none;
     position: fixed;
+}
+
+.fixed-header{
+    width: 100%;
+    position: fixed;
+    background-color: aliceblue;
     box-shadow: 0 3px 2px rgb(17, 15, 15);
 }
+
+
+
 img{
     width: 80px
 }
@@ -45,6 +58,7 @@ li{
 }
 li a{
     text-decoration: none;
+    color: rgb(157, 11, 38);
 }
 .navbar{
     width: 25px;
@@ -70,8 +84,10 @@ article{
     color: white;
 }
 
+
 h3{
-    font-size: 250%;
+    font-size: 170%;
+    color: blue;
 }
 
 button{
@@ -92,30 +108,41 @@ button:hover{
     cursor: pointer;
 }
 
-section{
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-}
 
 .about, .tours{
     background-color: whitesmoke;
 }
 section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;   
 }
+
 #about,#tours{
-    display: flex;
-    align-items: center;
     background-color: bisque;
 }
 
+.details{
+    width: 40%;
+    text-align: center;
+}
+footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: smaller;
+    padding-top: 8px;    
+}
 @media(max-width:630px){
-    header{
+    .header{
+        background-color: aliceblue;
+        box-shadow: 0 3px 2px rgb(17, 15, 15);
         padding-left: 20px;
         justify-content: space-between;
         gap: 60%;
@@ -136,6 +163,7 @@ section{
     }
 
     .ul {
+        width: 100%;
         transition: 0.8s;
         display: flex;
         flex-direction: column; 
@@ -150,13 +178,21 @@ section{
     li{
         height: 5px;
     }
+    
+    li a{
+        color: black;
+    }
     article{
-        font-size: 70%;
+        font-size: 85%;
         width: 80%;
     }
-    h3{
+    .details{
+        width: 80%;
+    }
+    h3, h2{
         font-size: 220%;
     }
+    
     button{
         margin-top: 9px;
         padding: 5px;
@@ -165,13 +201,13 @@ section{
 }
 
 @media(max-width:350px){
-    header{
+    .header{
         gap: 30%;
     }
 }
 
 @media(max-width:180px){
-    header{
+    .header{
         gap: 5%; 
     }
 }
