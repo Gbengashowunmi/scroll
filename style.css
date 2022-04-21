@@ -127,10 +127,14 @@ section{
     background-color: bisque;
 }
 
-.details{
-    width: 40%;
-    text-align: center;
-}
+
+article{
+        font-size: 85%;
+        width: 80%;
+    }
+    .details{
+        width: 80%;
+    }  
 footer{
     width: 100%;
     background-color: black;
