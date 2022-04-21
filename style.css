@@ -83,7 +83,9 @@ article{
     text-align: center;
     color: white;
 }
-
+p{
+    font-size:89%;
+ }
 
 h3{
     font-size: 170%;
